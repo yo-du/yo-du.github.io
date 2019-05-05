@@ -1467,11 +1467,10 @@ figure.highlight,
 /* toc 文章目录*/
 .post .clear {
   position: fixed;
-  padding: 10px 20px;
   right: 30px;
   top: 100px;
   height: 70%;
-  overflow-y: scroll;
+  overflow-y: auto;
   border: 1px solid #eee; }
 
 .toc-article {
@@ -1480,24 +1479,28 @@ figure.highlight,
 .toc-title {
   font-size: 120%; }
 
-#toc {
-  line-height: 1em;
-  float: right; }
-  #toc .toc {
-    padding-left: 10px;
-    margin: 0.5em;
-    line-height: 1.8em;
-    font-size: 100%; }
-    #toc .toc li {
-      list-style-type: none; }
-  #toc .toc-child {
-    padding-left: 0;
-    font-size: 90%; }
-    #toc .toc-child li {
-      list-style-type: disc;
-      margin-left: 1em; }
-  #toc span.toc-text {
-    word-break: break-all; }
+#toc .toc {
+  padding-left: 10px;
+  margin: 0.5em;
+  line-height: 1.8em;
+  font-size: 100%;
+  font-weight: 500;
+  list-style-position: inside; }
+  #toc .toc li {
+    list-style-type: none; }
+
+#toc .toc-child {
+  padding-left: 0;
+  font-size: 90%;
+  font-weight: 400; }
+  #toc .toc-child li {
+    list-style-type: disc;
+    margin-left: 0.4em; }
+  #toc .toc-child .toc-link {
+    margin-left: -6px; }
+
+#toc span.toc-text {
+  word-break: break-all; }
 
 /* table*/
 table {
