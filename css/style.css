@@ -1491,11 +1491,11 @@ figure.highlight,
     #toc .toc li {
       list-style-type: none; }
   #toc .toc-child {
-    margin-left: 1em;
     padding-left: 0;
     font-size: 90%; }
     #toc .toc-child li {
-      list-style-type: disc; }
+      list-style-type: disc;
+      margin-left: 1em; }
   #toc span.toc-text {
     word-break: break-all; }
 
