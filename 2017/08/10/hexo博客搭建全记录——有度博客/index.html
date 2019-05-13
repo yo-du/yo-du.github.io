@@ -25,9 +25,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>以后每次执行可以依次输入下面命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<p>这时博客已部署到网上，在浏览器输入网址即可，例如：<a href="https://yo-du.github.io/" target="_blank" rel="noopener">yo-du.github.io</a>。</p>
+<p>这时博客已部署到网上，在浏览器输入网址即可，例如：<a href="https://yoodu.github.io/" target="_blank" rel="noopener">yoodu.github.io</a>。</p>
 <h2 id="博客配置"><a href="#博客配置" class="headerlink" title="博客配置"></a>博客配置</h2><h4 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h4><p>注册<a href="https://github.com" target="_blank" rel="noopener">github</a>账号，以username.github.io为名称创建New repository，便能使用Github Pages建立个人网站，可使用 300M 免费空间。</p>
-<p>例如：我的username是<strong>yo-du</strong>，Repository name就是<strong>yo-du.github.io</strong>（也是网站链接）；</p>
+<p>例如：我的username是<strong>yoodu</strong>，Repository name就是<strong>yoodu.github.io</strong>（也是网站链接）；</p>
 <p><img src="/-media/hexo博客搭建全记录——有度博客/170730_162306.png" alt="170730_162306"></p>
 <h4 id="添加SSH秘钥"><a href="#添加SSH秘钥" class="headerlink" title="添加SSH秘钥"></a>添加SSH秘钥</h4><p>用 SSH keys让本地 git 项目与远程的 GitHub 建立联系。</p>
 <p>在终端（Terminal）输入：</p>
@@ -35,7 +35,7 @@
 <p>一路<code>Enter</code>，秘钥生成后，得到两个文件<strong>id_rsa</strong>和<strong>id_rsa.pub</strong>，用带格式的记事本打开id_rsa.pub，Ctrl + a复制里面的所有内容，然后进入<a href="https://github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a>，将复制的内容粘贴到Key的输入框，Title随便写，点击<code>Add SSH key</code>按钮即可。</p>
 <h4 id="配置-config-yml-文件"><a href="#配置-config-yml-文件" class="headerlink" title="配置 _config.yml 文件"></a>配置 _config.yml 文件</h4><p>在Hexo安装的目录中找到 <strong>_config.yml</strong> 文件<br>翻到最后的<strong>deploy</strong> 字样，改成如下格式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git </span><br><span class="line">  repo: https://github.com/用户名/用户名.github.io.git </span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>repo从下图直接复制：<a href="https://github.com/yo-du/yo-du.github.io.git" target="_blank" rel="noopener">https://github.com/yo-du/yo-du.github.io.git</a></p>
+<p>repo从下图直接复制：<a href="https://github.com/yoodu/yoodu.github.io.git" target="_blank" rel="noopener">https://github.com/yoodu/yoodu.github.io.git</a></p>
 <p><img src="/-media/hexo博客搭建全记录——有度博客/170730_175623.png" alt="170730_175623"></p>
 <p><strong>注意</strong>：冒号后面有一个空格；</p>
 <p>使用github可以不用写branch那一行。<br>如果要使用多个 deployer，可改成如下样式：</p>
@@ -43,6 +43,7 @@
 <h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h3><p>注册域名的时候要注意有些域名是有限制的，像之前.me域名是无法备案的，所以我也换了新域名 yodu.xyz 。</p>
 <p><a href="https://www.domcomp.com" target="_blank" rel="noopener">域名比价</a></p>
 <p><a href="http://www.cnblogs.com/weed8/p/7207582.html" target="_blank" rel="noopener">Namesilo 购买注册流程</a></p>
+<p><a href="https://www.namesilo.com" target="_blank" rel="noopener">www.namesilo.com</a></p>
 <p><img src="/-media/hexo博客搭建全记录——有度博客/170805_083507.png" alt="DFB7CE3A-CB0B-4A7F-BD0A-1B8A1086B387"></p>
 <p>在 promotion code那里输入 1024 这个优惠码，并点 submit 即可优惠 1 USD</p>
 <ul>
@@ -53,7 +54,7 @@
 <h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>1.使用国内的<a href="http://www.dnspod.cn/" target="_blank" rel="noopener">DNSPod</a>解析域名，在域名注册商网站修改Namesevers DNS地址；</p>
 <p><img src="/-media/hexo博客搭建全记录——有度博客/170805_095110.png" alt="170805_095110"></p>
 <p>2.将域名与 GitHub Pages 的空间绑定</p>
-<p>在终端输入ping自己的github地址，如：<code>ping yo-du.github.io</code>，查到对应的IP地址，我的是151.101.77.147</p>
+<p>在终端输入ping自己的github地址，如：<code>ping yoodu.github.io</code>，查到对应的IP地址，我的是151.101.77.147</p>
 <p><img src="/-media/hexo博客搭建全记录——有度博客/170805_085837.png" alt="170805_085837"></p>
 <p>在DNSPod后台添加两条记录（www、@），输入也就是域名要解析到的IP地址（就是上面查到的）。</p>
 <p><img src="/-media/hexo博客搭建全记录——有度博客/170805_084623.png" alt="170805_084623"></p>
